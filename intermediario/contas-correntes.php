@@ -17,5 +17,5 @@ $conta3 = ["titular" => "Bacon e Bob","saldo" => 400];
 $contasCorrentes = [$conta1,$conta2,$conta3];
 
 for ($i=0; $i < count($contasCorrentes); $i++) { 
-    echo $contasCorrentes[$i]["titular"]."tem saldo de R$ ".$contasCorrentes[$i]["saldo"] . PHP_EOL;
+    echo $contasCorrentes[$i]["titular"]." tem saldo de R$ ".$contasCorrentes[$i]["saldo"] . PHP_EOL;
 } 

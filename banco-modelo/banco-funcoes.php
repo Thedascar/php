@@ -4,7 +4,7 @@
 /**
  * Criação de uma função com uma sub-rotina de exibir as mensagens.
  */
-function exibeMensagem(string $mensagem)
+function exibeMensagem(string $mensagem) : void
 {
     echo $mensagem . PHP_EOL;
 }

@@ -1,11 +1,43 @@
 <?php
 
 /**
+ * Uma function sub-rotina não precisa ter parâmetro
+ */
+function exibeOlaMundo(){
+    echo 'Óla Mundo';
+}
+
+
+/**
  * Criação de uma função com uma sub-rotina de exibir as mensagens.
  */
 function exibeMensagem($mensagem){
     echo $mensagem . PHP_EOL;
 }
+
+/**
+ * Usamos return para que a função passe a representar o valor.
+ */
+
+function adiciona2($x){
+   return $x + 2;
+}
+$resultado = adiciona2(10);
+echo $resultado;
+
+
+/**
+ * Função para saque
+ */
+
+ function sacar($conta,$valorASacar){
+    if($valorASacar > $conta ['saldo'] ){
+        exibeMensagem("Você não pode sacar este valor ");
+    }else{
+        $conta['saldo'] -= 500;
+    }
+ }
+
 
 
 /**

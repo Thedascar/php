@@ -24,7 +24,7 @@ function exibeMensagem(string $mensagem) : void
     if($valorASacar > $conta ['saldo'] ){
         exibeMensagem("Você não pode sacar este valor ");
     }else{
-        $conta['saldo'] -= 500;
+        $conta['saldo'] -= $valorASacar;
     }
     return $conta;
  }
@@ -43,7 +43,7 @@ function depositar(array $conta,float $valorADepositar) : array
 
 
 /**
- * Modificando os indices dos arrays.
+ * indices dos arrays.
  */
 $contasCorrentes = [
     "123.456.787-10" => ["titular" => "Lucas","saldo" => 1000],
@@ -61,9 +61,9 @@ $contasCorrentes["123.456.789-12"] = sacar($contasCorrentes["123.456.789-12"],50
 /**
  * Fazendo um deposito
  */
-$contasCorrentes["123.456.787-10"] = depositar($contasCorrentes["123.456.787-10"],500);
-
-$contasCorrentes["123.456.789-12"] = depositar($contasCorrentes["123.456.789-12"],500);
+$contasCorrentes["123.456.787-10"] = depositar($contasCorrentes["123.456.787-10"],385.89);
+$contasCorrentes["123.456.788-11"] = depositar($contasCorrentes["123.456.788-11"],427.87);
+$contasCorrentes["123.456.789-12"] = depositar($contasCorrentes["123.456.789-12"],1589.56);
 
 foreach ($contasCorrentes as $cpf => $conta) {
     exibeMensagem($cpf . " " .$conta["titular"]." tem saldo de ".$conta["saldo"]);

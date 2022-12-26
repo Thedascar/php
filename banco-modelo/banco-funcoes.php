@@ -1,46 +1,17 @@
 <?php
 
-
 /**
- * Criação de uma função com uma sub-rotina de exibir as mensagens.
- */
-function exibeMensagem(string $mensagem) : void
-{
-    echo $mensagem . PHP_EOL;
-}
-
-/**
- * Função para saque.
- * Colocamos no parâmetro o float
- * para dizer ao php que queremos apenas números
+ * Include para chamar uma funcao em outra pagina
+ * include 'funcoes-banco.php';
  * 
- * também precisamos definir o tipo da $conta e do retorno
+ * Usamos para fazer a importação com mensagem de erro caso,
+ * nome do arquivo esteja errado usamos
+ * require
  * 
- * neste caso retornamos um elemento array
+ * require_once para atualizar os dados
  */
 
- function sacar(array $conta,float $valorASacar) : array
- {
-    if($valorASacar > $conta ['saldo'] ){
-        exibeMensagem("Você não pode sacar este valor ");
-    }else{
-        $conta['saldo'] -= $valorASacar;
-    }
-    return $conta;
- }
- /**
-* Função Deposito
-*/
-function depositar(array $conta,float $valorADepositar) : array
-{
-    if($valorADepositar > 0){
-        $conta['saldo'] += $valorADepositar;
-    }else{
-        exibeMensagem('Valor não pode ser negativo');
-    }
-    return $conta;
-}
-
+ require_once 'funcoes-banco.php';
 
 /**
  * indices dos arrays.
@@ -66,5 +37,5 @@ $contasCorrentes["123.456.788-11"] = depositar($contasCorrentes["123.456.788-11"
 $contasCorrentes["123.456.789-12"] = depositar($contasCorrentes["123.456.789-12"],1589.56);
 
 foreach ($contasCorrentes as $cpf => $conta) {
-    exibeMensagem($cpf . " " .$conta["titular"]." tem saldo de ".$conta["saldo"]);
+    exibeMensagem("$cpf {$conta['titular']} tem saldo de R$ {$conta['saldo']}");
 }

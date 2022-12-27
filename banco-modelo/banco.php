@@ -44,7 +44,7 @@ echo $resultado;
  * Modificando os indices dos arrays.
  */
 $contasCorrentes = [
-    "123.456.787-10" => ["titular" => "Lucas","saldo" => 1000],
+    "123.456.787-10" =>["titular" => "Lucas","saldo" => 1000],
     "123.456.788-11" =>["titular" => "Aline","saldo" => 15000],
     "123.456.789-12" =>["titular" => "Bacon e Bob","saldo" => 500]
 ];
@@ -69,5 +69,6 @@ if(500 > $contasCorrentes["123.456.789-12"]['saldo'] ){
 
 
 foreach ($contasCorrentes as $cpf => $conta) {
-    exibeMensagem($cpf . " " .$conta["titular"]."tem saldo de ".$conta["saldo"]);
+    ['titular' => $titular,'saldo' => $saldo] = $conta;
+    exibeMensagem ("$cpf $titular R$ $saldo");
 }

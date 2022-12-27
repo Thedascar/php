@@ -39,3 +39,13 @@ function depositar(array $conta,float $valorADepositar) : array
     }
     return $conta;
 }
+
+/**
+ * mb_strtoupper() deixar tudo em maiusculo.
+ * ou para não precisar usar libs se usa strtoupper
+ * usamos o & comercial para passar a refêrencia e não mais copiar seu 
+ * valor.
+ */
+function titularComLetrasMaiusculas(array &$conta){
+    $conta['titular'] = mb_strtoupper($conta['titular']);
+}

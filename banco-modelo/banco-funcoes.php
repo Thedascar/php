@@ -36,6 +36,16 @@ $contasCorrentes["123.456.787-10"] = depositar($contasCorrentes["123.456.787-10"
 $contasCorrentes["123.456.788-11"] = depositar($contasCorrentes["123.456.788-11"],427.87);
 $contasCorrentes["123.456.789-12"] = depositar($contasCorrentes["123.456.789-12"],1589.56);
 
+titularComLetrasMaiusculas($contasCorrentes[
+    "123.456.787-10"]);
+
+/**
+ * A função unset remove uma variavel da memoria
+ */
+
+ unset($contasCorrentes["123.456.788-11"]);
+ 
 foreach ($contasCorrentes as $cpf => $conta) {
     exibeMensagem("$cpf {$conta['titular']} tem saldo de R$ {$conta['saldo']}");
+    
 }

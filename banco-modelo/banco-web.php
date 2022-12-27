@@ -38,18 +38,32 @@ $contasCorrentes["123.456.789-12"] = depositar($contasCorrentes["123.456.789-12"
 
 titularComLetrasMaiusculas($contasCorrentes[
     "123.456.787-10"]);
-
 /**
- * A função unset remove uma variavel da memoria
- */
+ * Usamos ?> para fechar o nosso arquivo do php
+ * e tudo que vem abaixo, é considerado texto.
+ */    
+?>
 
- unset($contasCorrentes["123.456.788-11"]);
- 
-foreach ($contasCorrentes as $cpf => $conta) {
-    /**
-     * Usamos a função list ou [] para atribuir um indice a uam variavel
-     */
-        ['titular' => $titular,'saldo' => $saldo] = $conta;
-        exibeMensagem ("$cpf $titular R$ $saldo");
-    
-}
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <h1>Contas Correntes</h1>
+
+    <dl>
+        <?php foreach($contasCorrentes as $cpf => $conta) { ?>
+        <dt>
+            <h3><?php echo $conta['titular'] ?> - <?php echo $cpf?></h3> 
+        </dt>
+        <dd>
+            <?php echo "Saldo: " . $conta['saldo']?>
+        </dd>
+        <?php } ?>
+    </dl>
+</body>
+</html>

@@ -11,7 +11,7 @@ $notas = [
 /**
  * rsorte() e a função inversa de sort()....
  * 
- * para manter as chaves do arrays com seus respectivos arrays utilizamos
+ * para manter as chaves do arrays com seus respectivos arrays utilizamos.
  * 
  * asort() - (associative) crescente
  * arsort() -  decrescente

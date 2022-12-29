@@ -8,8 +8,8 @@ $notas = [
 ];
 
 /**
- * O sorte não faz a copia dos valores e sim altera pela referência
- * alterando o item original
+ * O sort() não faz a copia dos valores e sim altera pela referência.
+ * alterando o item original.
  * neste caso e melhor fazer uma cópia do array.
  * 
  * Usamos sort() para ordenar a lista.
@@ -36,6 +36,9 @@ var_dump($notasOrdenadas);
     'quatro'
 ];
 
+/**
+ * Em textos o sort() ordena por ordem alfábetica.
+ */
 $textoOrdenado = $texto;
 sort($textoOrdenado);
 

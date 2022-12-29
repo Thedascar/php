@@ -14,12 +14,15 @@ var_dump($notas);
 /**
  * Função is_array nos ajudara validar um array
  * mostrando se a lista é um array ordenado ou não.
+ * retorna um valor booleano.
+ * array ordenado é 0,1,2,3......
  */
 if (is_array($notas)){
-    echo 'É um array';   
-
+    echo 'É um array-is_array :' . PHP_EOL; 
 }
-
+/**
+ * temos uma resposta falsa já que temos as keys como string.
+ */
 var_dump(array_is_list($notas));
 
 
@@ -37,7 +40,11 @@ foreach ($arrays as $key => $nomeNumero) {
 echo "Total: " . count($arrays). PHP_EOL;
 
 /**
- * Arrays_is_list faz uma verificação para ver se o arrays e uma lista sequencial para poder fazer um for padrão.
+ * Arrays_is_list faz uma verificação para ver se o arrays e uma lista sequêncial para poder fazer um for padrão.
+ * 
+ * neste casa temos um booleano true,
+ * pois a ordem esta correta 0,1,2....
+ * mesmo sendo chaves colocadas seguem a ordem
  */
  
 var_dump(array_is_list($arrays));

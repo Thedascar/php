@@ -33,6 +33,8 @@ var_dump($alunos2023);
 /**
  * Podemos também unir com operador +
  * apenas funciona para arrays ordenados de 1,2,3,4.....
+ * quando contatena com + ele ignora os valores das chaves
+ * já existentes.
  */
 $alunos2023B = $alunos2022 + $novosAlunos;
 var_dump($alunos2023B);

@@ -10,4 +10,17 @@ class Conta
     public string $cpfTitular;
     public string $nomeTitular;
     public float $saldo;
+
+
+    // uma função dentro de uma classe é chamda de método.
+    public function sacar(float $valorASacar)
+    {
+        // Usamos $this para descrever que estamos chamadando o método
+        // dentro da classe, $THIS VALE PARA A REFERÊNCIA QUE CHAMAMOS A FUNÇÃO..
+        if($valorASacar > $this->saldo){
+            echo 'saldo indisponível';
+        } else{
+            $this->saldo -= $valorASacar;
+        }
+    }
 }

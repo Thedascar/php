@@ -14,7 +14,12 @@ $segundaConta->saldo = 387.78;
 
 // Usamo método sacar sendo referênciado pelo $this
 // precisamos usar (->) para referênciar os método..
-$primeiraConta->sacar(250);
+$primeiraConta->sacar(200);
+$segundaConta->depositar(0);
+$segundaConta->depositar(100);
+
+//Usando método de transferência....
+$segundaConta->transferir(100,$primeiraConta);
 
 var_dump($primeiraConta) . PHP_EOL;
 var_dump($segundaConta) . PHP_EOL;

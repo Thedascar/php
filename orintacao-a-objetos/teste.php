@@ -1,6 +1,6 @@
 <?php
 // fazemos a chamada da classe....
-require 'Conta.php';
+require 'src/Conta.php';
 // criando uma nova conta... um novo objeto..
 // Utilizando a forma criada.. ultilizamos a palavra new
 $primeiraConta = new Conta();

@@ -1,6 +1,6 @@
 <?php
 
-require 'Conta.php';
+require_once 'src/Conta.php';
 
 $primeiraConta = new COnta();
 $primeiraConta->cpfTitular = '123.456.789.-10';

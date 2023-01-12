@@ -13,3 +13,7 @@ $primeiraConta->sacar(200); // isso é ok
 echo $primeiraConta->getSaldo() . PHP_EOL;
 echo $primeiraConta->getCpfTitular() . PHP_EOL;
 echo $primeiraConta->getNomeTitular() . PHP_EOL;
+echo PHP_EOL;
+echo $segundaConta->getSaldo() . PHP_EOL;
+echo $segundaConta->getCpfTitular() . PHP_EOL;
+echo $segundaConta->getNomeTitular() . PHP_EOL;

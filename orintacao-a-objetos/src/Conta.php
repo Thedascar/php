@@ -14,6 +14,13 @@ class Conta
     // por regra em classe smepre usamos private
     private float $saldo = 0;
 
+    // criamos dentro da classe o método construtor...__construct()
+    public function __construct(string $cpfTitular,string $nomeTitular)
+    {
+        $this->cpfTitular = $cpfTitular;
+        $this->nomeTitular = $nomeTitular;
+        $this->saldo = 0;
+    }
 
     // uma função dentro de uma classe é chamda de método.
     public function sacar(float $valorASacar) : void
@@ -48,30 +55,18 @@ class Conta
     
     //aqui criamos uam classse para poder ver o saldo e colocamos como flaot
     // apenas retornamos o $this do saldo para poder acessar..
-    public function recuperarSaldo() : float
+    public function getSaldo() : float
     {
         return $this->saldo;
     }
    
-
-    public function defineCpfTitular(string $cpf) : void
-    {
-        $this->cpfTitular = $cpf;
-    }
-
-
-    public function recuperarCpfTitular() : string
+    public function getCpfTitular() : string
     {
         return $this->cpfTitular;
     }
    
-    // retornamos parametros void porque nao tem retorno..
-    public function defineNomeTitular(string $nome) : void
-    {
-        $this->nomeTitular = $nome;
-    }
-
-    public function recuperarNomeTitular() : string
+   
+    public function getNomeTitular() : string
     {
         return $this->nomeTitular;
     }

@@ -7,23 +7,20 @@ class Conta
 {
     // usamos os métodos públicos...
     // chamos isso aqui de VVVVVV variáveis..
-    private string $cpfTitular;
-    private string $nomeTitular;
+    private $titular;
     // usamos private para não dar acesso a variavel por fora
     // apenas conseguimos usar com parametro $this
     // por regra em classe smepre usamos private
-    private float $saldo = 0;
+    private float $saldo;
     // aqui criamos um metodo static que se referencia a Conta
     // e um metodo para criar um atributo da conta
     private static $numeroDeContas = 0;
 
     // criamos dentro da classe o método construtor...__construct()
     // Usamos o metodo construtor apenas para inicializar e nao para validar..
-    public function __construct(string $cpfTitular,string $nomeTitular)
+    public function __construct(Titular $titular)
     {
-        $this->cpfTitular = $cpfTitular;
-        $this->validaNomeTitular($nomeTitular);
-        $this->nomeTitular = $nomeTitular;
+        $this->titular = $titular;
         $this->saldo = 0;
         
         // Usando :: conseguimos acessar os metofos referente a Conta
@@ -36,7 +33,6 @@ class Conta
         self::$numeroDeContas--;
         
     }
-
 
     // uma função dentro de uma classe é chamda de método.
     public function sacar(float $valorASacar) : void
@@ -75,24 +71,15 @@ class Conta
     {
         return $this->saldo;
     }
-   
-    public function getCpfTitular() : string
-    {
-        return $this->cpfTitular;
-    }
-   
-   
+
     public function getNomeTitular() : string
     {
-        return $this->nomeTitular;
+        return $this->titular->getNome();
     }
 
-    // neste caso precisamos deixar o metodo privado para que so a $this conta tenha acesso a este metodo
-    private function validaNomeTitular(string $nomeTitular){
-        if(strlen($nomeTitular) < 5){
-            echo 'Nome precisa ter pelo menos 5 caracteres';
-            exit();
-        }
+    public function getCpfTitular() : string
+    {
+        return $this->titular->getCpf();
     }
 
     public static function getNumeroDeContas() : int

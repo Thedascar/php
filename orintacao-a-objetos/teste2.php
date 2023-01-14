@@ -2,7 +2,7 @@
 
 require 'src/Conta.php';
 
-$primeiraConta = new COnta();
+$primeiraConta = new Conta();
 $primeiraConta->cpfTitular = '123.456.789.-10';
 $primeiraConta->nomeTitular = 'Lucas Ramon';
 $primeiraConta->saldo = 258.78;

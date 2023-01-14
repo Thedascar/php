@@ -3,10 +3,16 @@
 class Carro
 {
     private string $modelo;
-    public string $marca;
-    public string $cor;
+    private string $marca;
+    private string $cor;
 
-   
+    public function __construct(string $modelo,string $marca,string $cor)
+    {
+        $this->modelo = $modelo;
+        $this->marca = $marca;
+        $this->cor = $cor;
+    }
+
     public function getCarro() : string
     {
        return $this->modelo;

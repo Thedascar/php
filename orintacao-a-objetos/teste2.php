@@ -1,7 +1,7 @@
 <?php
 
 require 'src/Conta.php';
-
+/**
 $primeiraConta = new Conta();
 $primeiraConta->cpfTitular = '123.456.789.-10';
 $primeiraConta->nomeTitular = 'Lucas Ramon';
@@ -14,4 +14,4 @@ $segundaConta->saldo = 1587.78;
 
 var_dump($primeiraConta) . PHP_EOL;
 var_dump($segundaConta) . PHP_EOL;
-
+*/

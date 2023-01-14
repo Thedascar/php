@@ -2,11 +2,7 @@
 
 require_once 'src/Carro.php';
 
-$primeirocarro = new Carro();
-$primeirocarro->setCarro('gol+ ');
-$primeirocarro->marca = 'volks';
-$primeirocarro->cor = 'azul';
-
+$primeirocarro = new Carro('gol','volks','azul');
 
 echo $primeirocarro->getCarro() . PHP_EOL;
 echo $primeirocarro->getCor() . PHP_EOL;

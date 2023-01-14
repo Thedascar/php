@@ -5,9 +5,10 @@
 // abestração e um dos pialres mais importantes..
 class Conta
 {
+    // titualr e chamado de composicao de obejtos
+    private $titular;
     // usamos os métodos públicos...
     // chamos isso aqui de VVVVVV variáveis..
-    private $titular;
     // usamos private para não dar acesso a variavel por fora
     // apenas conseguimos usar com parametro $this
     // por regra em classe smepre usamos private

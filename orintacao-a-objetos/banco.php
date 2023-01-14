@@ -17,3 +17,4 @@ $primeiraConta->sacar(200); // isso é ok
 echo $primeiraConta->getNomeTitular() . PHP_EOL;
 echo $primeiraConta->getCpfTitular() . PHP_EOL;
 var_dump($primeiraConta);
+

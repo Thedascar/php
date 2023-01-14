@@ -6,7 +6,7 @@
 class Conta
 {
     // titualr e chamado de composicao de obejtos
-    private $titular;
+    private Titular $titular;
     // usamos os métodos públicos...
     // chamos isso aqui de VVVVVV variáveis..
     // usamos private para não dar acesso a variavel por fora
